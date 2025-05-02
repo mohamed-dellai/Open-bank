@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --openbank-pink: #e91e63;
+  --button-gray: #3c3c3c;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white min-h-screen;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply w-full;
+    @apply bg-[#222222];
+    @apply border;
+    @apply border-[#333333];
+    @apply rounded-full;
+    @apply py-4;
+    @apply px-5;
+    @apply text-white;
+    @apply focus:outline-none;
+    @apply focus:border-[#444444];
+  }
+
+  .primary-button {
+    @apply w-full;
+    @apply bg-[#e91e63];
+    @apply text-white;
+    @apply py-4;
+    @apply rounded-full;
+    @apply font-medium;
+    @apply hover:bg-opacity-90;
+    @apply transition-all;
+  }
+
+  .secondary-button {
+    @apply w-full;
+    @apply bg-[#3c3c3c];
+    @apply text-white;
+    @apply py-4;
+    @apply rounded-full;
+    @apply font-medium;
+    @apply hover:bg-opacity-90;
+    @apply transition-all;
+  }
+
+  .link-text {
+    @apply text-white;
+    @apply underline;
+    @apply font-medium;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out forwards;
+}
