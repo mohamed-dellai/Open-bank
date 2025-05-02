@@ -12,7 +12,11 @@
     @apply bg-black text-white min-h-screen;
   }
 }
-
+body{
+  background-color: #111111 !important;
+  max-height: 100vh !important;
+  overflow: hidden !important;
+}
 @layer components {
   .input-field {
     @apply w-full;
